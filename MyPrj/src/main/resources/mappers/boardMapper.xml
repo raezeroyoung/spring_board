@@ -26,4 +26,16 @@
 		   	   , #{userId}
 		   	   )
 	</insert>
+	
+	<update id="boardUpdate" parameterType="com.myprj.dto.BoardDTO">
+		UPDATE MY_BOARD
+		   SET TITLE = #{title}
+		     , CONTENTS = #{contents}
+		     , USERID = #{userId}
+		 WHERE NO = #{no}
+	</update>
+	
+	<delete id="boardDelete" parameterType="String">
+		DELETE MY_BOARD WHERE NO = #{no}
+	</delete>
 </mapper>

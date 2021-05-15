@@ -14,20 +14,26 @@ public class BoardService {
 	@Autowired
 	private BoardMapper boardMapper;
 	
-	// °Ô½Ã±Û ÀüÃ¼ Á¶È¸ ±â´É
+	// ï¿½Ô½Ã±ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½
 	public List<BoardDTO> boardList(){
 		return boardMapper.boardList(); 
 	}
 	
-	// °Ô½Ã±Û ÇÏ³ª Á¶È¸
+	// ï¿½Ô½Ã±ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½È¸
 	public BoardDTO boardOne(String no) {
 		return boardMapper.boardOne(no);
 	}
 	
-	// ±Û¾²±â
+	// ï¿½Û¾ï¿½ï¿½ï¿½
 	public void boardWrite(BoardDTO boardDto) {
 		boardMapper.boardWrite(boardDto);
 	}
 	
+	public void boardUpdate(BoardDTO boardDTO) {
+		boardMapper.boardUpdate(boardDTO);
+	}
 	
+	public void boardDelete(String no) {
+		boardMapper.boardDelete(no);
+	}
 }

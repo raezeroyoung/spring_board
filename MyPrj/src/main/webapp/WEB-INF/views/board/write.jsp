@@ -17,7 +17,7 @@
 </head>
 <script type="text/javascript">
 	function writeOk() {
-		var frm = ${"#frm"};
+		var frm = $("#frm");
 		frm.form.submit();  
 	}
 

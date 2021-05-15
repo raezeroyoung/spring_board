@@ -29,6 +29,15 @@
  </style>
 </head>
 <script type="text/javascript">
+	function updateOne(){
+		var no = $("#no").val();
+		location.href = "update?no="+no;
+	}
+	
+	function deleteOne(){
+		var no = $("#no").val();
+		location.href = "delete/"+no;
+	}
 </script>
 <body>
 <h1>게시글상세</h1>
@@ -43,5 +52,8 @@
 	<tbody>
 	</tbody>
 </table>
+<input type="hidden" id="no" value="${boardDto.no }">
+<button onclick="updateOne()">수정</button>
+<button onclick="deleteOne()">삭제</button>
 </body>
 </html>

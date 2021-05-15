@@ -19,18 +19,26 @@ public class BoardMapper {
 	//update
 	//delete
 	
-	// °Ô½Ã±Û ¸ñ·Ï Á¶È¸
+	// ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 	public List<BoardDTO> boardList(){
 		return sql.selectList("boardList");
 	}
 	
-	// °Ô½Ã±Û ÇÏ³ª Á¶È¸
+	// ï¿½Ô½Ã±ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½È¸
 	public BoardDTO boardOne(String no) {
 		return sql.selectOne("boardOne", no);
 	}
 	
-	// ±Û¾²±â
+	// ï¿½Û¾ï¿½ï¿½ï¿½
 	public void boardWrite(BoardDTO boardDto) {
 		sql.insert("boardWrite", boardDto);
+	}
+	
+	public void boardUpdate(BoardDTO boardDTO) {
+		sql.update("boardUpdate",boardDTO);
+	}
+	
+	public void boardDelete(String no) {
+		sql.delete("boardDelete",no);
 	}
 }
